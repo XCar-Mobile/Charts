@@ -125,6 +125,7 @@ class BarChartViewController: DemoBaseViewController {
         
         var set1: BarChartDataSet! = nil
         if let set = chartView.data?.first as? BarChartDataSet {
+            set.cornerRadius = 5
             set1 = set
             set1.replaceEntries(yVals)
             chartView.data?.notifyDataChanged()
@@ -132,6 +133,7 @@ class BarChartViewController: DemoBaseViewController {
         } else {
             set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
             set1.colors = ChartColorTemplates.material()
+            set1.cornerRadius = 5
             set1.drawValuesEnabled = false
             
             let data = BarChartData(dataSet: set1)

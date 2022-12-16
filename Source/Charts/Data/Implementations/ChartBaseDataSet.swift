@@ -343,6 +343,8 @@ open class ChartBaseDataSet: NSObject, ChartDataSetProtocol, NSCopying
     {
         return drawValuesEnabled
     }
+    
+    open var cornerRadius: CGFloat = 0
 
     /// Set this to true to draw y-icons on the chart.
     ///
